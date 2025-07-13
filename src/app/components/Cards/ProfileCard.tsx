@@ -1,17 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 export default function ProfileCard() {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const checkSize = () => setIsDesktop(window.innerWidth >= 768);
-    checkSize();
-    window.addEventListener("resize", checkSize);
-    return () => window.removeEventListener("resize", checkSize);
-  }, []);
-
   return (
     <div className="mt-4 border border-gray-700 rounded-xl p-4 text-sm text-gray-300 shadow-inner font-mono text-[13px]">
       {/* Header — only show on desktop */}
@@ -32,7 +21,9 @@ export default function ProfileCard() {
       </div>
 
       {/* Info */}
-      <div className={`space-y-2 border-gray-700 md:mt-4  md:border-t  md:pt-4`}>
+      <div
+        className={`space-y-2 border-gray-700 md:mt-4  md:border-t  md:pt-4`}
+      >
         <p>
           <span className="text-gray-500">Stack:</span>{" "}
           <span className="text-white">React, Next.js, Tailwind and more</span>

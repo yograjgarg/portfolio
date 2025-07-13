@@ -15,7 +15,7 @@ function Typewriter({
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
-      setDisplayed((prev) => {
+      setDisplayed(() => {
         const next = text.slice(0, i + 1);
         i++;
         return next;
