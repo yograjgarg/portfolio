@@ -18,7 +18,7 @@ export default function PortfolioLayout({
   return (
     <html lang="en">
       <body>
-        <main className={cn("flex h-[100dvh] overflow-scroll w-full md:flex-row flex-col", inter.className)}>
+        <main className={cn("flex h-[100dvh] overflow-scrol w-full md:flex-row flex-col", inter.className)}>
           {children}
         </main>
       </body>

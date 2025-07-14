@@ -109,8 +109,8 @@ export default function Terminal() {
   return (
     <section className="flex flex-col flex-1 bg-[#212121] md:p-6 p-2 text-white font-mono">
       <div className="flex-1 overflow-y-auto mb-4 space-y-2 whitespace-pre-wrap ">
-        {messages.map(({ id, fromUser, text }) => (
-          <p key={id} className={fromUser ? "text-green-400" : "text-gray-300"}>
+        {messages.map(({ id, fromUser, text }, index) => (
+          <p key={index} className={fromUser ? "text-green-400" : "text-gray-300"}>
             {fromUser ? (
               <span className="text-green-400 text-xs font-mono mt-4">
                 visitor@portfolio:~$ <span className="text-white">_{text}</span>
